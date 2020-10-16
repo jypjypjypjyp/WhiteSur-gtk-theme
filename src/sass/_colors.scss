@@ -113,7 +113,7 @@ $menu_bd:                           if($variant == 'light', rgba(black, 0.05), r
 @if $trans == 'true' { $menu_bg:    if($variant == 'light', rgba($base_color, 0.95), rgba($bg_color, 0.95)); }
 
 // Panel colors
-$panel_opacity: 0.16;
+$panel_opacity: 0.50;
 
 $panel_bg:                          if($variant == 'light', #f1f1f1, #2a2a2a);
 

@@ -2559,7 +2559,10 @@ $login_entry_bg: if($variant == 'dark', rgba(black, 0.1), rgba(white, 0.1));
 .login-dialog {
   //reset
   border: none;
-  background-color: transparent;
+  // background-color: transparent;
+  background-color: rgba(black, 0.5);
+  width: fit-content;
+  height: fit-content;
 
   StEntry {
     selection-background-color: $track_color;
@@ -2683,6 +2686,8 @@ $login_entry_bg: if($variant == 'dark', rgba(black, 0.1), rgba(white, 0.1));
 // .login-dialog-username,
 .user-widget-label {
   color: $light_alt_fg_color;
+  padding-left: 20px;
+  font-size: 18px;
 }
 
 .user-widget.horizontal {

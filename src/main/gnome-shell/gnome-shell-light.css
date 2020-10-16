@@ -159,19 +159,19 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: #242424;
 }
 
-#screenShieldNotifications StScrollBar StBin#trough, #overview StScrollBar StBin#trough {
+#overview StScrollBar StBin#trough, #screenShieldNotifications StScrollBar StBin#trough {
   background-color: rgba(255, 255, 255, 0.15);
 }
 
-#screenShieldNotifications StScrollBar StButton#vhandle, #overview StScrollBar StButton#vhandle, #screenShieldNotifications StScrollBar StButton#hhandle, #overview StScrollBar StButton#hhandle {
+#overview StScrollBar StButton#vhandle, #screenShieldNotifications StScrollBar StButton#vhandle, #overview StScrollBar StButton#hhandle, #screenShieldNotifications StScrollBar StButton#hhandle {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-#screenShieldNotifications StScrollBar StButton#vhandle:hover, #overview StScrollBar StButton#vhandle:hover, #screenShieldNotifications StScrollBar StButton#hhandle:hover, #overview StScrollBar StButton#hhandle:hover {
+#overview StScrollBar StButton#vhandle:hover, #screenShieldNotifications StScrollBar StButton#vhandle:hover, #overview StScrollBar StButton#hhandle:hover, #screenShieldNotifications StScrollBar StButton#hhandle:hover {
   background-color: rgba(255, 255, 255, 0.85);
 }
 
-#screenShieldNotifications StScrollBar StButton#vhandle:active, #overview StScrollBar StButton#vhandle:active, #screenShieldNotifications StScrollBar StButton#hhandle:active, #overview StScrollBar StButton#hhandle:active {
+#overview StScrollBar StButton#vhandle:active, #screenShieldNotifications StScrollBar StButton#vhandle:active, #overview StScrollBar StButton#hhandle:active, #screenShieldNotifications StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.85);
 }
 
@@ -725,7 +725,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .hidden {
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
 }
 
 .prompt-dialog-null-label {
@@ -830,7 +830,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 /* Popovers/Menus */
-.candidate-popup-boxpointer, .popup-menu .popup-menu-content, .modal-dialog {
+.modal-dialog, .popup-menu .popup-menu-content, .candidate-popup-boxpointer {
   background-color: rgba(245, 245, 245, 0.95);
   border-radius: 14px;
   border: none;
@@ -904,7 +904,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(255, 255, 255, 0.75);
 }
 
-.popup-menu .popup-menu-item.selected:checked {
+.popup-menu .popup-menu-item:checked.selected {
   color: white;
   background-color: #0860f2;
 }
@@ -1075,7 +1075,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 */
 .popup-menu-arrow,
 .popup-menu-icon {
-  icon-size: 1.2307692308em;
+  icon-size: 1.23077em;
 }
 
 /* OSD */
@@ -1172,7 +1172,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 .switcher-arrow {
-  border-color: rgba(0, 0, 0, 0);
+  border-color: transparent;
   color: #565656;
 }
 
@@ -1251,7 +1251,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 /* TOP BAR */
 #panel {
-  background-color: rgba(255, 255, 255, 0.16);
+  background-color: rgba(255, 255, 255, 0.5);
   /* transition from solid to transparent */
   transition-duration: 250ms;
   font-weight: bold;
@@ -1260,7 +1260,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel:overview, #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
-  background-color: rgba(255, 255, 255, 0.16);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #panel #panelLeft, #panel #panelCenter {
@@ -1269,7 +1269,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel .panel-corner {
   -panel-corner-radius: 0;
-  -panel-corner-background-color: rgba(255, 255, 255, 0.16);
+  -panel-corner-background-color: rgba(255, 255, 255, 0.5);
   -panel-corner-border-width: 2px;
   -panel-corner-border-color: transparent;
 }
@@ -1350,15 +1350,23 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel .panel-button .system-status-icon {
-  icon-size: 1.2307692308em;
+  icon-size: 1.23077em;
   padding: 0 4px;
 }
 
-.unlock-screen #panel .panel-button, .login-screen #panel .panel-button, .lock-screen #panel .panel-button {
+.unlock-screen #panel .panel-button,
+.login-screen #panel .panel-button,
+.lock-screen #panel .panel-button {
   color: white;
 }
 
-.unlock-screen #panel .panel-button:focus, .unlock-screen #panel .panel-button:hover, .unlock-screen #panel .panel-button:active, .login-screen #panel .panel-button:focus, .login-screen #panel .panel-button:hover, .login-screen #panel .panel-button:active, .lock-screen #panel .panel-button:focus, .lock-screen #panel .panel-button:hover, .lock-screen #panel .panel-button:active {
+.unlock-screen #panel .panel-button:focus, .unlock-screen #panel .panel-button:hover, .unlock-screen #panel .panel-button:active,
+.login-screen #panel .panel-button:focus,
+.login-screen #panel .panel-button:hover,
+.login-screen #panel .panel-button:active,
+.lock-screen #panel .panel-button:focus,
+.lock-screen #panel .panel-button:hover,
+.lock-screen #panel .panel-button:active {
   color: white;
 }
 
@@ -1385,7 +1393,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel.solid {
-  background-color: rgba(255, 255, 255, 0.16);
+  background-color: rgba(255, 255, 255, 0.5);
   /* transition from transparent to solid */
   transition-duration: 250ms;
   background-gradient-direction: none;
@@ -1397,7 +1405,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }
 
 #panel.solid .panel-corner {
-  -panel-corner-background-color: rgba(255, 255, 255, 0.16);
+  -panel-corner-background-color: rgba(255, 255, 255, 0.5);
 }
 
 #panel.solid .panel-button {
@@ -2357,11 +2365,19 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .show-apps .overview-icon,
 .show-apps .overview-icon > StIcon,
 .app-well-app .overview-icon,
-.app-well-app .overview-icon > StIcon {
+.app-well-app .overview-icon > StIcon,
+.app-well-app.app-folder .overview-icon,
+.app-well-app.app-folder .overview-icon > StIcon,
+.grid-search-result .overview-icon,
+.grid-search-result .overview-icon > StIcon {
   icon-shadow: 0 1px 3px 3px rgba(0, 0, 0, 0.15);
 }
 
-.search-provider-icon:hover .overview-icon, .search-provider-icon:focus .overview-icon, .search-provider-icon:selected .overview-icon,
+.grid-search-result:hover .overview-icon, .search-provider-icon:hover .overview-icon,
+.grid-search-result:focus .overview-icon,
+.search-provider-icon:focus .overview-icon,
+.grid-search-result:selected .overview-icon,
+.search-provider-icon:selected .overview-icon,
 .show-apps:hover .overview-icon,
 .show-apps:focus .overview-icon,
 .show-apps:selected .overview-icon,
@@ -2380,7 +2396,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-image: none;
 }
 
-.search-provider-icon:active .overview-icon, .search-provider-icon:checked .overview-icon,
+.grid-search-result:active .overview-icon, .search-provider-icon:active .overview-icon,
+.grid-search-result:checked .overview-icon,
+.search-provider-icon:checked .overview-icon,
 .show-apps:active .overview-icon,
 .show-apps:checked .overview-icon,
 .app-well-app:active .overview-icon,
@@ -2409,7 +2427,8 @@ StWidget.focused .app-well-app-running-dot {
 .search-provider-icon,
 .list-search-result, .grid-search-result .overview-icon, .search-provider-icon .overview-icon,
 .show-apps .overview-icon,
-.app-well-app .overview-icon {
+.app-well-app .overview-icon,
+.app-well-app.app-folder .overview-icon {
   color: rgba(255, 255, 255, 0.85);
   border-radius: 12px;
   padding: 6px;
@@ -2512,7 +2531,8 @@ StWidget.focused .app-well-app-running-dot {
   /* FIXME: this is to keep the label in sync with the entry */
 }
 
-.app-folder-dialog .folder-name-container .folder-name-label, .app-folder-dialog .folder-name-container .folder-name-entry {
+.app-folder-dialog .folder-name-container .folder-name-label,
+.app-folder-dialog .folder-name-container .folder-name-entry {
   font-size: 18pt;
   font-weight: bold;
 }
@@ -2544,7 +2564,9 @@ StWidget.focused .app-well-app-running-dot {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.app-folder-dialog StButton#vhandle, .app-folder-dialog StButton#vhandle:hover, .app-folder-dialog StButton#vhandle:active {
+.app-folder-dialog StButton#vhandle,
+.app-folder-dialog StButton#vhandle:hover,
+.app-folder-dialog StButton#vhandle:active {
   background-color: transparent;
 }
 
@@ -2628,7 +2650,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .notification-banner .secondary-icon {
-  icon-size: 1.2307692308em;
+  icon-size: 1.23077em;
 }
 
 .notification-banner .notification-actions {
@@ -2679,7 +2701,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .secondary-icon {
-  icon-size: 1.2307692308em;
+  icon-size: 1.23077em;
 }
 
 .chat-body {
@@ -2958,7 +2980,7 @@ StWidget.focused .app-well-app-running-dot {
 }
 
 .candidate-page-button-icon {
-  icon-size: 1.2307692308em;
+  icon-size: 1.23077em;
 }
 
 /* Auth Dialogs & Screen Shield */
@@ -2981,7 +3003,9 @@ StWidget.focused .app-well-app-running-dot {
 
 .login-dialog {
   border: none;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: fit-content;
+  height: fit-content;
 }
 
 .login-dialog StEntry {
@@ -3135,7 +3159,8 @@ StWidget.focused .app-well-app-running-dot {
   padding-left: 2px;
 }
 
-.login-dialog-not-listed-button:focus .login-dialog-not-listed-label, .login-dialog-not-listed-button:hover .login-dialog-not-listed-label {
+.login-dialog-not-listed-button:focus .login-dialog-not-listed-label,
+.login-dialog-not-listed-button:hover .login-dialog-not-listed-label {
   color: white;
 }
 
@@ -3234,6 +3259,8 @@ StWidget.focused .app-well-app-running-dot {
 
 .user-widget-label {
   color: rgba(255, 255, 255, 0.85);
+  padding-left: 20px;
+  font-size: 18px;
 }
 
 .user-widget.horizontal .user-widget-label {
@@ -3550,41 +3577,52 @@ StWidget.focused .app-well-app-running-dot {
   background-color: black;
 }
 
-#dashtodockContainer #dash, #dashtodockContainer:overview #dash, #dashtodockContainer.extended #dash, #dashtodockContainer.extended:overview #dash {
+#dashtodockContainer #dash,
+#dashtodockContainer:overview #dash,
+#dashtodockContainer.extended #dash,
+#dashtodockContainer.extended:overview #dash {
   padding: 0;
   border: none;
   margin: 0;
 }
 
-#dashtodockContainer.top #dash, #dashtodockContainer.top:overview #dash {
+#dashtodockContainer.top #dash,
+#dashtodockContainer.top:overview #dash {
   border-radius: 14px;
 }
 
-#dashtodockContainer.top.extended #dash, #dashtodockContainer.top.extended:overview #dash {
+#dashtodockContainer.top.extended #dash,
+#dashtodockContainer.top.extended:overview #dash {
   border-radius: 14px;
 }
 
-#dashtodockContainer.bottom #dash, #dashtodockContainer.bottom:overview #dash {
+#dashtodockContainer.bottom #dash,
+#dashtodockContainer.bottom:overview #dash {
   border-radius: 14px;
 }
 
-#dashtodockContainer.bottom.extended #dash, #dashtodockContainer.bottom.extended:overview #dash {
+#dashtodockContainer.bottom.extended #dash,
+#dashtodockContainer.bottom.extended:overview #dash {
   border-radius: 14px;
 }
 
-#dashtodockContainer.left #dash, #dashtodockContainer.left:overview #dash {
+#dashtodockContainer.left #dash,
+#dashtodockContainer.left:overview #dash {
   border-radius: 14px;
 }
 
-#dashtodockContainer.left.extended #dash, #dashtodockContainer.left.extended:overview #dash {
+#dashtodockContainer.left.extended #dash,
+#dashtodockContainer.left.extended:overview #dash {
   border-radius: 14px;
 }
 
-#dashtodockContainer.right #dash, #dashtodockContainer.right:overview #dash {
+#dashtodockContainer.right #dash,
+#dashtodockContainer.right:overview #dash {
   border-radius: 14px;
 }
 
-#dashtodockContainer.right.extended #dash, #dashtodockContainer.right.extended:overview #dash {
+#dashtodockContainer.right.extended #dash,
+#dashtodockContainer.right.extended:overview #dash {
   border-radius: 14px;
 }
 
